@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrot Game</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="titulo">PARROT CARD GAME</h1>
+    <div class="container">
+        <div class="grid">
+            <div id="1" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/bobrossparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="1" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/bobrossparrot.gif"
+                    alt="">
+            </div>
+            <div id="2" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/explodyparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="2" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/explodyparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="3" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <div>
+                    <img  data-test="face-down-image" class="front-face face "
+                        src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                        alt="">
+                </div>
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/fiestaparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="3" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/fiestaparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="4" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/metalparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="4" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/metalparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="5" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/revertitparrot.gif"
+                    alt="">
+
+            </div>
+            <div id="5" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/revertitparrot.gif"
+                    alt="">
+            </div>
+            <div id="6" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/tripletsparrot.gif"
+                    alt="">
+            </div>
+            <div id="6" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/tripletsparrot.gif"
+                    alt="">
+            </div>
+            <div id="7" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face "
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/unicornparrot.gif"
+                    alt="">
+            </div>
+            <div id="7" data-test="card" class="card d-none" onclick="selectCard(this)">
+                <img  data-test="face-down-image" class="front-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/back.png"
+                    alt="">
+                <img data-test="face-up-image" class="back-face face"
+                    src="./imagens/projeto__parrots__imagens/Arquivos Úteis - Projeto 04 - Parrot Card Game/unicornparrot.gif"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
