@@ -96,6 +96,8 @@ function checkVictory() {
 }
 
 function contador() {
+    const contador = document.getElementById("time")
     time++
-    console.log(time)
+    contador.innerHTML = `${time}`
+    
 }

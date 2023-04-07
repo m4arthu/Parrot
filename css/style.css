@@ -68,6 +68,13 @@ h1 {
   transform:rotateY(-180deg) ;
 }
 
+#time {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 36px;
+  color: #A7E9AF;
+}
 
 @media (max-width:600px) {
   .container h1 {
