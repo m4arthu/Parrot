@@ -1,17 +1,25 @@
 
-var tempo = setInterval(contador, 1000)
+var tempo
 var QtdCartas
+var jogadas
+var carta1, carta2
 
 (function shuffle() {
     embaralhar()
-    tempo
 })()
 
 function embaralhar() {
     const cards = document.querySelectorAll(".card")
     const qtdcarta = prompt('Selecione a quantidade de cartas \n selecione um valor par entre 4 e 14!!')
+    tempo = setInterval(contador, 1000)
+    time = 0
+    jogadas = 0
     QtdCartas = Number(qtdcarta)
     var cardlst = []
+    cards.forEach((carta) => {    
+        carta.classList.add("d-none")
+        carta.classList.remove("pareada")
+    })
 
     if (qtdcarta == null || Number(qtdcarta) == 0 || Number(qtdcarta) % 2 != 0 ||
         Number(qtdcarta) == 2 || Number(qtdcarta) > 14) {
@@ -23,14 +31,13 @@ function embaralhar() {
         cardlst.forEach(card => {
             let ramdomPos = Math.floor(Math.random() * 14);
             card.style.order = ramdomPos;
+            card.setAttribute("onclick", "selectCard(this)")
             card.classList.remove("d-none")
         })
 
     }
 }
-var time = 0
-var carta1, carta2
-var jogadas = 0
+
 function selectCard(carta) {
     jogadas++
     const flipedCards = document.querySelectorAll(".flip")
@@ -79,17 +86,12 @@ function checkVictory() {
     carta2.classList.remove("flip")
     carta1 = undefined
     carta2 = undefined
-    if (cartasParedas.length == QtdCartas) {
-        console.log(cartasParedas)
-        cartasParedas.forEach((carta) => {
-            carta.setAttribute("onclick", "selectCard(this)")
-            carta.classList.remove("pareada")
-            carta.classList.add("d-none")
-        })
-            window.alert(`Você ganhou em ${jogadas} jogadas!`)
-            jogadas = 0
-            time = 0
-            embaralhar()
+    if (cartasParedas.length == QtdCartas) {  
+        window.clearInterval(tempo)
+        setTimeout(()=> {
+            window.alert(`Você ganhou em ${jogadas} jogadas! A duração do jogo foi de ${time} segundos!`)
+            Reiniciar()
+        },500)
     }
 }
 
@@ -98,4 +100,20 @@ function contador() {
     time++
     contador.innerHTML = `${time}`
     
+}
+
+function Reiniciar() {
+    var reiniciar 
+    while (reiniciar !== "sim" || reiniciar !== "não" && (reiniciar => /[A-Z]/.test(reiniciar)) == false  ){
+        reiniciar = window.prompt("deseja jogar novamente?")
+    }
+    if(reiniciar == "sim") {
+        embaralhar()
+    } else if(reiniciar == "não") {
+       Saida()
+    }
+}
+
+function Saida() {
+    return
 }
