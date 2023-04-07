@@ -1,7 +1,10 @@
 
+var tempo = setInterval(contador, 1000)
 var QtdCartas
+
 (function shuffle() {
     embaralhar()
+    tempo
 })()
 
 function embaralhar() {
@@ -25,7 +28,7 @@ function embaralhar() {
 
     }
 }
-
+var time = 0
 var carta1, carta2
 var jogadas = 0
 function selectCard(carta) {
@@ -36,13 +39,13 @@ function selectCard(carta) {
         if (carta1 == undefined) {
             carta1 = carta
             carta1.removeAttribute("onclick")
-        } else if(carta1 != carta) {
+        } else if (carta1 != carta) {
             carta2 = carta
             carta1.removeAttribute("onclick")
         }
         if (carta1 != undefined && carta2 != undefined) {
             // se as cartas forem  iguais não desviram 
-            if (carta1.id == carta2.id ) {
+            if (carta1.id == carta2.id) {
                 carta1.classList.add("pareada")
                 carta2.classList.add("pareada")
                 checkVictory()
@@ -62,8 +65,8 @@ function rotateAnimation(Cards) {
         setTimeout(() => {
             carta1.classList.remove("flip")
             carta2.classList.remove("flip")
-            carta1.setAttribute("onclick","selectCard(this)")
-            carta2.setAttribute("onclick","selectCard(this)")
+            carta1.setAttribute("onclick", "selectCard(this)")
+            carta2.setAttribute("onclick", "selectCard(this)")
             carta1 = undefined
             carta2 = undefined
         }, 1000)
@@ -74,11 +77,25 @@ function checkVictory() {
     const cartasParedas = document.querySelectorAll(".pareada")
     carta1.classList.remove("flip")
     carta2.classList.remove("flip")
-    carta1 =undefined
+    carta1 = undefined
     carta2 = undefined
     if (cartasParedas.length == QtdCartas) {
+        console.log(cartasParedas)
+        cartasParedas.forEach((carta) => {
+            carta.setAttribute("onclick", "selectCard(this)")
+            carta.classList.remove("pareada")
+            carta.classList.add("d-none")
+        })
         setTimeout(() => {
             window.alert(`Você ganhou em ${jogadas} jogadas!`)
+            jogadas = 0
+            time = 0
+            embaralhar()
         }, 500)
     }
+}
+
+function contador() {
+    time++
+    console.log(time)
 }
