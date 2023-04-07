@@ -86,12 +86,10 @@ function checkVictory() {
             carta.classList.remove("pareada")
             carta.classList.add("d-none")
         })
-        setTimeout(() => {
             window.alert(`Você ganhou em ${jogadas} jogadas!`)
             jogadas = 0
             time = 0
             embaralhar()
-        }, 500)
     }
 }
 
