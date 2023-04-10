@@ -39,10 +39,11 @@ function embaralhar() {
 }
 
 function selectCard(carta) {
-    jogadas++
+    
     const flipedCards = document.querySelectorAll(".flip")
     // caso  não tenha mais de duas cartas executar a função
     if (flipedCards.length < 2) {
+         jogadas++
         if (carta1 == undefined) {
             carta1 = carta
             carta1.removeAttribute("onclick")
@@ -105,7 +106,7 @@ function contador() {
 function Reiniciar() {
     var reiniciar 
     while (reiniciar !== "sim" || reiniciar !== "não" && (reiniciar => /[A-Z]/.test(reiniciar)) == false  ){
-        reiniciar = window.prompt("deseja jogar novamente?")
+        reiniciar = window.prompt("deseja jogar novamente (sim ou não)?")
     }
     if(reiniciar == "sim") {
         embaralhar()
